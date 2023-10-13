@@ -7,10 +7,11 @@ import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
 
 function App() {
+  const user = useContext(AuthContext);
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route exact path="/" element = {user ? <Home/> : <Register/>} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/profile" element={<Profile />} />

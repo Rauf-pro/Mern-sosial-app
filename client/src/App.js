@@ -4,6 +4,7 @@ import Profile from "./pages/Profile/Profile";
 import Register from "./pages/Register/Register";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useContext } from "react";
+import { AuthContext } from "./context/AuthContext";
 
 function App() {
   return (
